@@ -1,6 +1,6 @@
 context("Testing AnalyzeEntry function")
 
-test-AnalyzeEntry <- test_that("Testing for the analyze entry function.", {
+test_that("Testing for the analyze entry function.", {
   #Initializing the result variable for depression
   result <- list(ï..Condition = "Unknown",Loss.of.Interest = 0,Sleeping.Iregularities = 0
                   ,Mood.Swings = 0,Loss.Self.Esteem = 15,Weight.fluctuation = 0,
@@ -15,7 +15,7 @@ test-AnalyzeEntry <- test_that("Testing for the analyze entry function.", {
   expect_identical(AnalyzeEntry("Hi i had thoughts of Suicide"), result)
   
   #Sets the result variable to expected output
-  result2 <- list(ï..Condition = "Unknown",Loss.of.Interest = 23,Sleeping.Iregularities = 26
+  result <- list(ï..Condition = "Unknown",Loss.of.Interest = 23,Sleeping.Iregularities = 26
                    ,Mood.Swings = 38,Loss.Self.Esteem = 20,Weight.fluctuation = 33,
                    Detatchment.from.Reality = 5,Physical.Response = 14,Guilt = 0,
                    Suicidal.Thoughts.Tendincies = 28,
@@ -24,7 +24,7 @@ test-AnalyzeEntry <- test_that("Testing for the analyze entry function.", {
                    Impulsive.or.erratic.behaviour = 38)
   
   #Tests for eating disorders using a key word
-  expect_identical(AnalyzeEntry("Hi i have not been eating much"), result2)
+  expect_identical(AnalyzeEntry("Hi i have not been eating much"), result)
   
   #Sets the result variable to expected output
   result <- list(ï..Condition = "Unknown",Loss.of.Interest = 12,Sleeping.Iregularities = 23
