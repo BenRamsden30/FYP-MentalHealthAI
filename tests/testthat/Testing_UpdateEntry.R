@@ -51,4 +51,6 @@ test_that("Testing of the Updateentry function",
             
             #Tests to see if the update works correctly for the work 
             expect_identical(UpdateEntry(15,test), result)
+            
+          #Note that this function cannot be called without having a match with the Triggers.csv
           })
